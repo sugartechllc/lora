@@ -77,8 +77,8 @@ void loop()
 
       SerialUSB.print("RFM Server: Got message: ");
       SerialUSB.print((char*)buf);
-      //SerialUSB.print(" RSSI: ");
-      //SerialUSB.print(rf95.lastRssi(), DEC);
+      SerialUSB.print(" RSSI: ");
+      SerialUSB.print(rf95.lastRssi(), DEC);
       SerialUSB.println();
 
       // Send a reply

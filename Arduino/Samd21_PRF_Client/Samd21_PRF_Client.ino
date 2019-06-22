@@ -86,9 +86,9 @@ void loop()
     // Should be a reply message for us now
     if (rf95.recv(buf, &len)) {
       SerialUSB.print("RFM Client: Got reply: ");
-      SerialUSB.println((char*)buf);
-      //SerialUSB.print(" RSSI: ");
-      //SerialUSB.print(rf95.lastRssi(), DEC);
+      SerialUSB.print((char*)buf);
+      SerialUSB.print(" RSSI: ");
+      SerialUSB.println(rf95.lastRssi(), DEC);
     }
     else {
       SerialUSB.println("RFM Client: Receive failed");
